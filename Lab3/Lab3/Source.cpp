@@ -44,7 +44,7 @@ int main() {
 	if (index != -1) {
 		std::cout << "your element index: " << index << std::endl;
 	}
-	else std::cout << "we cant find your element :(";
+	else std::cout << "we cant find your element :(" << std::endl;
 
 	return 0;
 }
