@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
 
 double getA(double x) {
     if (x < 0.5) return 0.1;
@@ -21,7 +20,7 @@ void bubbleSort(double arr[], int n, int& comp, int& swaps) {
         for (int j = 0; j < n - i - 1; j++) {
             comp++;
             if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
+                std::swap(arr[j], arr[j + 1]);
                 swaps++;
             }
         }
@@ -51,11 +50,11 @@ int main() {
     int n = (x_end - x_start) / step + 1;
     double* y = new double [n];
 
-    cout << "Table:\n";
+    std::cout << "Table:\n";
     int i = 0;
     for (double x = x_start; x <= x_end + 1e-9; x += step) {
         y[i] = calcY(x, b);
-        cout << "x=" << x << " | " << "\ty=" << y[i] << endl;
+        std::cout << "x=" << x << " | " << "\ty=" << y[i] << std::endl;
         i++;
     }
 
@@ -69,14 +68,14 @@ int main() {
     int comp1, swap1, comp2, swap2;
 
     bubbleSort(y1, n, comp1, swap1);
-    cout << "\nBubble sorted:\n";
-    for (int i = 0; i < n; i++) cout << y1[i] << " ";
-    cout << "\nComparisons: " << comp1 << " Swaps: " << swap1 << endl;
+    std::cout << "\nBubble sorted:\n";
+    for (int i = 0; i < n; i++) std::cout << y1[i] << " ";
+    std::cout << "\nComparisons: " << comp1 << " Swaps: " << swap1 << std::endl;
     
     insertionSort(y2, n, comp2, swap2);
-    cout << "\nInsertion sorted:\n";
-    for (int i = 0; i < n; i++) cout << y2[i] << " ";
-    cout << "\nComparisons: " << comp2 << " Swaps: " << swap2 << endl;
+    std::cout << "\nInsertion sorted:\n";
+    for (int i = 0; i < n; i++) std::cout << y2[i] << " ";
+    std::cout << "\nComparisons: " << comp2 << " Swaps: " << swap2 << std::endl;
 
     return 0;
 }
