@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 using namespace std;
-
+// 9 8 4 7 3 1
 void heapify(int arr[], int n, int i) {
     int largest = i;
     int left = 2 * i + 1;

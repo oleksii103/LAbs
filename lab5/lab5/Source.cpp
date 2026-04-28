@@ -2,6 +2,7 @@
 #include <algorithm> 
 #include <ctime>
 
+// 1 4 7 8 9 4
 
 void shell(int arr[], int N ) {
     for (int gap = N / 2; gap > 0; gap /= 2) {
