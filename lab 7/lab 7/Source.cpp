@@ -7,8 +7,8 @@ void merge (double arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
-    int* L = new int[n1];
-    int* R = new int[n2];
+    double* L = new double[n1];
+    double* R = new double[n2];
 
     for (int i = 0; i < n1; i++)
         L[i] = arr[left + i];
