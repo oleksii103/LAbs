@@ -15,20 +15,6 @@ double arithmeticTail(double current, double d, int n) {
     return arithmeticTail(current + d, d, n - 1);
 }
 
-double geometricLinear(double a1, double q, int n) {
-    if (n == 1)
-        return a1;
-
-    return geometricLinear(a1, q, n - 1) * q;
-}
-
-double geometricTail(double current, double q, int n) {
-    if (n == 1)
-        return current;
-
-    return geometricTail(current * q, q, n - 1);
-}
-
 void merge(double arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
@@ -110,20 +96,6 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         arr[i] = arithmeticTail(a1, d, i + 1);
-        std::cout << arr[i] << " ";
-    }
-
-    std::cout << "\n\nGeometric progression (linear recursion):\n";
-
-    for (int i = 0; i < N; i++) {
-        arr[i] = geometricLinear(a1, q, i + 1);
-        std::cout << arr[i] << " ";
-    }
-
-    std::cout << "\n\nGeometric progression (tail recursion):\n";
-
-    for (int i = 0; i < N; i++) {
-        arr[i] = geometricTail(a1, q, i + 1);
         std::cout << arr[i] << " ";
     }
 
